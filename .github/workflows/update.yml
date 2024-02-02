@@ -23,6 +23,8 @@ jobs:
       
       - name: Update links
         run: |
+          ls -a
+          pwd
           cp README-template.md README.md
           echo "- Arknights: $(cat links/arknights)" >> README.md
           echo "- Skland: $(cat links/skland)" >> README.md
