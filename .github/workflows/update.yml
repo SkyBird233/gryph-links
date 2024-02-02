@@ -1,0 +1,33 @@
+name: Update links
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Setup folder
+        run: |
+          mkdir -p links
+
+      - name: Get links
+        run: |
+          curl -sI https://ak.hypergryph.com/downloads/android_lastest |grep -m 1 -oE "https://ak.hycdn.cn/apk/.*\.apk" > links/arknights || exit 1
+          curl -s https://web.hycdn.cn/skland/site/index.894c4f.js |grep -m 1 -oE "https://bbs.hycdn.cn/public/skland/others/download/lastest.*\.apk" > links/skland || exit 1
+      
+      - name: Update links
+        run: |
+          cp README-template.md README.md
+          echo "- Arknights: $(cat links/arknights)" >> README.md
+          echo "- Skland: $(cat links/skland)" >> README.md
+      
+      - name: Commit
+        uses: stefanzweifel/git-auto-commit-action@v5
+
+      
