@@ -3,6 +3,7 @@ name: Update links
 on:
   schedule:
     - cron: '0 */6 * * *'
+  push:
   workflow_dispatch:
 
 jobs:
@@ -26,7 +27,7 @@ jobs:
           curl -sI https://ak.hypergryph.com/downloads/android_lastest |grep -m 1 -oE "https://ak.hycdn.cn/apk/.*\.apk" > links/arknights || exit 1
           cat links/arknights
           echo "Getting skland link..."
-          curl -s --header 'Origin: https://www.skland.com' https://assets.skland.com/common-config/json/app-config.json | jq ".downloadUrl.android" > links/skland || exit 1
+          curl -s --header 'Origin: https://www.skland.com' https://assets.skland.com/common-config/json/app-config.json | jq -r ".downloadUrl.android" > links/skland || exit 1
           cat links/skland
       
       - name: Update links
