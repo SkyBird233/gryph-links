@@ -23,7 +23,7 @@ jobs:
       - name: Get links
         run: |
           curl -sI https://ak.hypergryph.com/downloads/android_lastest |grep -m 1 -oE "https://ak.hycdn.cn/apk/.*\.apk" > links/arknights || exit 1
-          curl -s https://web.hycdn.cn/skland/site/index.894c4f.js |grep -m 1 -oE "https://bbs.hycdn.cn/public/skland/others/download/lastest.*\.apk" > links/skland || exit 1
+          curl -s --header 'Origin: https://www.skland.com' https://assets.skland.com/common-config/json/app-config.json | jq ".downloadUrl.android" > links/skland || exit 1
       
       - name: Update links
         run: |
