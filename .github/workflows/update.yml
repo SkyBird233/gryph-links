@@ -22,14 +22,18 @@ jobs:
 
       - name: Get links
         run: |
+          echo "Getting arknights link..."
           curl -sI https://ak.hypergryph.com/downloads/android_lastest |grep -m 1 -oE "https://ak.hycdn.cn/apk/.*\.apk" > links/arknights || exit 1
+          cat links/arknights
+          echo "Getting skland link..."
           curl -s --header 'Origin: https://www.skland.com' https://assets.skland.com/common-config/json/app-config.json | jq ".downloadUrl.android" > links/skland || exit 1
+          cat links/skland
       
       - name: Update links
         run: |
           cp README-template.md README.md
-          echo "- Arknights: $(cat links/arknights)" >> README.md
-          echo "- Skland: $(cat links/skland)" >> README.md
+          sed -i "s|{{arknights_link}}|$(cat links/arknights)|" README.md
+          sed -i "s|{{skland_link}}|$(cat links/skland)|" README.md
       
       - name: Commit
         uses: stefanzweifel/git-auto-commit-action@v5
