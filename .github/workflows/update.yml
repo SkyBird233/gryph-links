@@ -33,6 +33,7 @@ jobs:
       - name: Update links
         run: |
           cp README-template.md README.md
+          sed -i "s|{{timestamp}}|$(date +%s)|" README.md
           sed -i "s|{{arknights_link}}|$(cat links/arknights)|" README.md
           sed -i "s|{{skland_link}}|$(cat links/skland)|" README.md
       
