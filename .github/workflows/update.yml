@@ -47,7 +47,7 @@ jobs:
           fi
 
           if diff links/skland <(echo ${{ steps.get_links.outputs.sk_link }}) &> /dev/null; then
-            sed -i "s|{{skland_timestamp}}|$(git log -1 --pretty=\"format:%ct\" links/skland")|" README.md
+            sed -i "s|{{skland_timestamp}}|$(git log -1 --pretty=\"format:%ct\" links/skland)|" README.md
           else
             echo "Updating skland link..."
             sed -i "s|{{skland_timestamp}}|$(date +%s)|" README.md
