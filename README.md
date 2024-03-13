@@ -7,11 +7,11 @@
 ---
 
 ## Arknights
-![Relative date](https://img.shields.io/date/1710329774?label=Updated)
+![Relative date](https://img.shields.io/date/1709792525?label=Updated)
 - Latest link: {{arknights_link}}
 - Tracking link: https://raw.githubusercontent.com/SkyBird233/gryph-links/main/links/arknights
 
 ## Skland
-![Relative date](https://img.shields.io/date/1710329774?label=Updated)
+![Relative date](https://img.shields.io/date/1710322152?label=Updated)
 - Latest link: {{skland_link}}
 - Tracking link: https://raw.githubusercontent.com/SkyBird233/gryph-links/main/links/skland
