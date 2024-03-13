@@ -22,20 +22,31 @@ jobs:
           mkdir -p links
 
       - name: Get links
+        id: get_links
         run: |
           echo "Getting arknights link..."
-          curl -sI https://ak.hypergryph.com/downloads/android_lastest |grep -m 1 -oE "https://ak.hycdn.cn/apk/.*\.apk" > links/arknights || exit 1
-          cat links/arknights
+          ak_link = `curl -sI https://ak.hypergryph.com/downloads/android_lastest | \
+            grep -m 1 -oE "https://ak.hycdn.cn/apk/.*\.apk"`
+          echo "ak_link=$ak_link" | tee -a $GITHUB_OUTPUT
+
           echo "Getting skland link..."
-          curl -s --header 'Origin: https://www.skland.com' https://assets.skland.com/common-config/json/app-config.json | jq -r ".downloadUrl.android" > links/skland || exit 1
-          cat links/skland
-      
+          sk_link = `curl -s --header 'Origin: https://www.skland.com' https://assets.skland.com/common-config/json/app-config.json | \
+            jq -r ".downloadUrl.android"`
+          echo "sk_link=$sk_link" | tee -a $GITHUB_OUTPUT
+
       - name: Update links
         run: |
           cp README-template.md README.md
-          sed -i "s|{{timestamp}}|$(date +%s)|" README.md
-          sed -i "s|{{arknights_link}}|$(cat links/arknights)|" README.md
-          sed -i "s|{{skland_link}}|$(cat links/skland)|" README.md
+
+          if diff links/arknights <(echo ${{ steps.get_links.outputs.ak_link }}) &> /dev/null; then
+            sed -i "s|{{arknights_timestamp}}|$(date +%s)|" README.md
+            sed -i "s|{{arknights_link}}|$(cat links/arknights)|" README.md
+          fi
+
+          if diff links/skland <(echo ${{ steps.get_links.outputs.sk_link }}) &> /dev/null; then
+            sed -i "s|{{skland_timestamp}}|$(date +%s)|" README.md
+            sed -i "s|{{skland_link}}|$(cat links/skland)|" README.md
+          fi
       
       - name: Commit
         uses: stefanzweifel/git-auto-commit-action@v5
