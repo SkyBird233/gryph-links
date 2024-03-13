@@ -39,11 +39,17 @@ jobs:
           cp README-template.md README.md
 
           if diff links/arknights <(echo ${{ steps.get_links.outputs.ak_link }}) &> /dev/null; then
+            sed -i "s|{{arknights_timestamp}}|$(git log -1 --pretty=\"format:%ct\" links/arknights)|" README.md
+          else
+            echo "Updating arknights link..."
             sed -i "s|{{arknights_timestamp}}|$(date +%s)|" README.md
             sed -i "s|{{arknights_link}}|$(cat links/arknights)|" README.md
           fi
 
           if diff links/skland <(echo ${{ steps.get_links.outputs.sk_link }}) &> /dev/null; then
+            sed -i "s|{{skland_timestamp}}|$(git log -1 --pretty=\"format:%ct\" links/skland")|" README.md
+          else
+            echo "Updating skland link..."
             sed -i "s|{{skland_timestamp}}|$(date +%s)|" README.md
             sed -i "s|{{skland_link}}|$(cat links/skland)|" README.md
           fi
