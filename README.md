@@ -8,10 +8,10 @@
 
 ## Arknights
 ![Relative date](https://img.shields.io/date/1709792525?label=Updated)
-- Latest link: {{arknights_link}}
+- Latest link: https://ak.hycdn.cn/apk/202403011713-2221-3edpmka8jf3f9jo7vjqk/arknights-hg-2221.apk
 - Tracking link: https://raw.githubusercontent.com/SkyBird233/gryph-links/main/links/arknights
 
 ## Skland
 ![Relative date](https://img.shields.io/date/1710322152?label=Updated)
-- Latest link: {{skland_link}}
+- Latest link: https://bbs.hycdn.cn/public/skland/others/download/lastest/f29ff3eace707be8a2903faa07c71670.apk
 - Tracking link: https://raw.githubusercontent.com/SkyBird233/gryph-links/main/links/skland
