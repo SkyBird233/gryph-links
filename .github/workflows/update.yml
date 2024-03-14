@@ -47,8 +47,8 @@ jobs:
             echo "Updating arknights link..."
             echo ${{ steps.get_links.outputs.ak_link }} > links/arknights
             sed -i "s|{{arknights_timestamp}}|$(date +%s)|" README.md
-            sed -i "s|{{arknights_link}}|$(cat links/arknights)|" README.md
           fi
+          sed -i "s|{{arknights_link}}|$(cat links/arknights)|" README.md
 
           if diff links/skland <(echo ${{ steps.get_links.outputs.sk_link }}) &> /dev/null; then
             echo "No update needed for skland link."
@@ -57,8 +57,8 @@ jobs:
             echo "Updating skland link..."
             echo ${{ steps.get_links.outputs.sk_link }} > links/skland
             sed -i "s|{{skland_timestamp}}|$(date +%s)|" README.md
-            sed -i "s|{{skland_link}}|$(cat links/skland)|" README.md
           fi
+          sed -i "s|{{skland_link}}|$(cat links/skland)|" README.md
       
       - name: Commit
         uses: stefanzweifel/git-auto-commit-action@v5
