@@ -2,7 +2,7 @@ name: Update links
 
 on:
   schedule:
-    - cron: '0 */6 * * *'
+    - cron: "0 */4 * * *"
   push:
   workflow_dispatch:
 
@@ -18,7 +18,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-    
+
       - name: Setup folder
         run: |
           mkdir -p links
@@ -59,8 +59,6 @@ jobs:
             sed -i "s|{{skland_timestamp}}|$(date +%s)|" README.md
           fi
           sed -i "s|{{skland_link}}|$(cat links/skland)|" README.md
-      
+
       - name: Commit
         uses: stefanzweifel/git-auto-commit-action@v5
-
-      
