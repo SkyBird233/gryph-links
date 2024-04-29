@@ -12,6 +12,6 @@
 - Tracking link: https://raw.githubusercontent.com/SkyBird233/gryph-links/main/links/arknights
 
 ## Skland
-![Relative date](https://img.shields.io/date/1713787948?label=Updated)
-- Latest link: https://bbs.hycdn.cn/public/skland/others/download/lastest/3678514bca3d07e106a7b3c239a5177a.apk
+![Relative date](https://img.shields.io/date/1714392730?label=Updated)
+- Latest link: https://bbs.hycdn.cn/public/skland/others/download/lastest/0a25a1f49f01628da7b7233743b273a8.apk
 - Tracking link: https://raw.githubusercontent.com/SkyBird233/gryph-links/main/links/skland
