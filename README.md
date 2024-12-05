@@ -7,8 +7,8 @@
 ---
 
 ## Arknights
-![Relative date](https://img.shields.io/date/1730434246?label=Updated)
-- Latest link: https://ak.hycdn.cn/apk/202410301849-2401-te3svuc43h63yfe8a4pk/arknights-hg-2401.apk
+![Relative date](https://img.shields.io/date/1733371896?label=Updated)
+- Latest link: https://ak.hycdn.cn/apk/202411291024-2421-u4qncegvfv5sesfovkaq/arknights-hg-2421.apk
 - Tracking link: https://raw.githubusercontent.com/SkyBird233/gryph-links/main/links/arknights
 - Obtanium: [Click to add](https://apps.obtainium.imranr.dev/redirect.html?r=obtainium://add/https://raw.githubusercontent.com/SkyBird233/gryph-links/main/links/arknights)
 
