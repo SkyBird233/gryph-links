@@ -27,7 +27,7 @@ jobs:
         id: get_links
         run: |
           echo "Getting arknights link..."
-          ak_link=`curl -ILs https://ak.hypergryph.com/downloads/android_lastest | sed -n "s/location: //p" | tail -n 1`
+          ak_link=`curl -Ls -r 0-0 -o /dev/null -w %{url_effective} https://ak.hypergryph.com/downloads/android_lastest`
           echo "ak_link=$ak_link" | tee -a $GITHUB_OUTPUT
 
           echo "Getting skland link..."
