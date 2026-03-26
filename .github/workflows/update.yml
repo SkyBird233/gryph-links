@@ -30,6 +30,10 @@ jobs:
           ak_link=`curl -Ls -r 0-0 -o /dev/null -w %{url_effective} https://ak.hypergryph.com/downloads/android_lastest`
           echo "ak_link=$ak_link" | tee -a $GITHUB_OUTPUT
 
+          echo "Getting endfield link..."
+          ef_link=`curl -Ls -r 0-0 -o /dev/null -w %{url_effective} https://launcher.hypergryph.com/game/latest/6LL0KJuqHBVz33WK/1/1`
+          echo "ef_link=$ef_link" | tee -a $GITHUB_OUTPUT
+
           echo "Getting skland link..."
           sk_link=`curl -s --header 'Origin: https://www.skland.com' https://assets.skland.com/common-config/json/app-config.json | \
             jq -r ".downloadUrl.android"`
@@ -48,6 +52,17 @@ jobs:
             sed -i "s|{{arknights_timestamp}}|$(date +%s)|" README.md
           fi
           sed -i "s|{{arknights_link}}|$(cat links/arknights)|" README.md
+
+          ef_link_regex='^[^_]*_\K[^/]+'
+          if [[ $(grep -m 1 -oP "$ef_link_regex" links/endfield) == $(echo ${{ steps.get_links.outputs.ef_link }} | grep -m 1 -oP "$ef_link_regex") ]]; then
+            echo "No update needed for endfield link."
+            sed -i "s|{{endfield_timestamp}}|$(git log -1 --pretty=%ct links/endfield)|" README.md
+          else
+            echo "Updating endfield link..."
+            echo ${{ steps.get_links.outputs.ef_link }} > links/endfield
+            sed -i "s|{{endfield_timestamp}}|$(date +%s)|" README.md
+          fi
+          sed -i "s|{{endfield_link}}|$(cat links/endfield)|" README.md
 
           if diff links/skland <(echo ${{ steps.get_links.outputs.sk_link }}) &> /dev/null; then
             echo "No update needed for skland link."
