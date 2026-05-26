@@ -22,7 +22,7 @@
 - Obtanium: [Click to add](https://apps.obtainium.imranr.dev/redirect.html?r=obtainium://add/https://raw.githubusercontent.com/SkyBird233/gryph-links/main/links/endfield)
 
 ## Skland
-![Relative date](https://img.shields.io/date/1779780818?label=Updated)
+![Relative date](https://img.shields.io/date/1779780819?label=Updated)
 - Direct link: https://bbs.hycdn.cn/public/skland/others/download/lastest/ed1c89b5e97ba4c035c0d7c19438b717.apk
 - Tracking link: https://raw.githubusercontent.com/SkyBird233/gryph-links/main/links/skland
 - Obtanium: [Click to add](https://apps.obtainium.imranr.dev/redirect.html?r=obtainium://add/https://raw.githubusercontent.com/SkyBird233/gryph-links/main/links/skland)
