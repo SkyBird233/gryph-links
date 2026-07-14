@@ -41,6 +41,7 @@ jobs:
 
       - name: Update links
         run: |
+          endfield_timestamp=$(grep -oP 'Endfield date]\(https:\/\/img\.shields\.io\/date\/\K\d+' README.md)
           cp README-template.md README.md
 
           if diff links/arknights <(echo ${{ steps.get_links.outputs.ak_link }}) &> /dev/null; then
@@ -55,12 +56,19 @@ jobs:
 
           ef_link_regex='^[^_]*_\K[^/]+'
           if [[ $(grep -m 1 -oP "$ef_link_regex" links/endfield) == $(echo ${{ steps.get_links.outputs.ef_link }} | grep -m 1 -oP "$ef_link_regex") ]]; then
-            echo "No update needed for endfield link."
-            sed -i "s|{{endfield_timestamp}}|$(git log -1 --pretty=%ct links/endfield)|" README.md
+            if [[ $(curl -s -o /dev/null -w "%{http_code}" $(cat links/endfield)) = 403 ]]; then
+              echo "Updating auth_key..."
+              echo ${{ steps.get_links.outputs.ef_link }} > links/endfield
+              sed -i "s|{{endfield_authkey_timestamp}}|$(date +%s)|" README.md
+            else
+              echo "No update needed for endfield link."
+            fi
+            sed -i "s|{{endfield_timestamp}}|$endfield_timestamp|" README.md
           else
             echo "Updating endfield link..."
             echo ${{ steps.get_links.outputs.ef_link }} > links/endfield
             sed -i "s|{{endfield_timestamp}}|$(date +%s)|" README.md
+            sed -i "s|{{endfield_authkey_timestamp}}|$(date +%s)|" README.md
           fi
           sed -i "s|{{endfield_link}}|$(cat links/endfield)|" README.md
 
