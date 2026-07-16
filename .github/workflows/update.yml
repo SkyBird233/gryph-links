@@ -46,7 +46,9 @@ jobs:
       - name: Update links
         run: |
           endfield_timestamp=$(grep -oP 'Endfield date]\(https:\/\/img\.shields\.io\/date\/\K\d+' README.md || true)
+          endfield_authkey_timestamp=$(grep -oP 'Endfield auth_key date]\(https:\/\/img\.shields\.io\/date\/\K\d+' README.md || true)
           endfield_cloud_timestamp=$(grep -oP 'Endfield Cloud date]\(https:\/\/img\.shields\.io\/date\/\K\d+' README.md || true)
+          endfield_cloud_authkey_timestamp=$(grep -oP 'Endfield Cloud auth_key date]\(https:\/\/img\.shields\.io\/date\/\K\d+' README.md || true)
           cp README-template.md README.md
 
           if diff links/arknights <(echo ${{ steps.get_links.outputs.ak_link }}) &> /dev/null; then
@@ -67,6 +69,7 @@ jobs:
               sed -i "s|{{endfield_authkey_timestamp}}|$(date +%s)|" README.md
             else
               echo "No update needed for endfield link."
+              sed -i "s|{{endfield_authkey_timestamp}}|$endfield_authkey_timestamp|" README.md
             fi
             sed -i "s|{{endfield_timestamp}}|$endfield_timestamp|" README.md
           else
@@ -85,6 +88,7 @@ jobs:
               sed -i "s|{{endfield_cloud_authkey_timestamp}}|$(date +%s)|" README.md
             else
               echo "No update needed for endfield_cloud link."
+              sed -i "s|{{endfield_cloud_authkey_timestamp}}|$endfield_cloud_authkey_timestamp|" README.md
             fi
             sed -i "s|{{endfield_cloud_timestamp}}|$endfield_cloud_timestamp|" README.md
           else
