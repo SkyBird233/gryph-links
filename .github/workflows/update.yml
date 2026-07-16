@@ -45,8 +45,8 @@ jobs:
 
       - name: Update links
         run: |
-          endfield_timestamp=$(grep -oP 'Endfield date]\(https:\/\/img\.shields\.io\/date\/\K\d+' README.md)
-          endfield_cloud_timestamp=$(grep -oP 'Endfield Cloud date]\(https:\/\/img\.shields\.io\/date\/\K\d+' README.md)
+          endfield_timestamp=$(grep -oP 'Endfield date]\(https:\/\/img\.shields\.io\/date\/\K\d+' README.md || true)
+          endfield_cloud_timestamp=$(grep -oP 'Endfield Cloud date]\(https:\/\/img\.shields\.io\/date\/\K\d+' README.md || true)
           cp README-template.md README.md
 
           if diff links/arknights <(echo ${{ steps.get_links.outputs.ak_link }}) &> /dev/null; then
