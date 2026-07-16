@@ -34,6 +34,10 @@ jobs:
           ef_link=`curl -Ls -r 0-0 -o /dev/null -w %{url_effective} https://launcher.hypergryph.com/game/latest/6LL0KJuqHBVz33WK/1/1`
           echo "ef_link=$ef_link" | tee -a $GITHUB_OUTPUT
 
+          echo "Getting endfield_cloud link..."
+          ef_cloud_link=`curl -Ls -r 0-0 -o /dev/null -w %{url_effective} https://launcher.hypergryph.com/game/latest/EjOB8xSdBmtLnzCX/1/1`
+          echo "ef_cloud_link=$ef_cloud_link" | tee -a $GITHUB_OUTPUT
+
           echo "Getting skland link..."
           sk_link=`curl -s --header 'Origin: https://www.skland.com' https://assets.skland.com/common-config/json/app-config.json | \
             jq -r ".downloadUrl.android"`
@@ -42,6 +46,7 @@ jobs:
       - name: Update links
         run: |
           endfield_timestamp=$(grep -oP 'Endfield date]\(https:\/\/img\.shields\.io\/date\/\K\d+' README.md)
+          endfield_cloud_timestamp=$(grep -oP 'Endfield Cloud date]\(https:\/\/img\.shields\.io\/date\/\K\d+' README.md)
           cp README-template.md README.md
 
           if diff links/arknights <(echo ${{ steps.get_links.outputs.ak_link }}) &> /dev/null; then
@@ -71,6 +76,24 @@ jobs:
             sed -i "s|{{endfield_authkey_timestamp}}|$(date +%s)|" README.md
           fi
           sed -i "s|{{endfield_link}}|$(cat links/endfield)|" README.md
+          
+          ef_cloud_link_regex='^[^_]*_\K[^/]+'
+          if [[ $(grep -m 1 -oP "$ef_cloud_link_regex" links/endfield_cloud) == $(echo ${{ steps.get_links.outputs.ef_cloud_link }} | grep -m 1 -oP "$ef_cloud_link_regex") ]]; then
+            if [[ $(curl -s -o /dev/null -w "%{http_code}" $(cat links/endfield_cloud)) = 403 ]]; then
+              echo "Updating auth_key..."
+              echo ${{ steps.get_links.outputs.ef_cloud_link }} > links/endfield_cloud
+              sed -i "s|{{endfield_cloud_authkey_timestamp}}|$(date +%s)|" README.md
+            else
+              echo "No update needed for endfield_cloud link."
+            fi
+            sed -i "s|{{endfield_cloud_timestamp}}|$endfield_cloud_timestamp|" README.md
+          else
+            echo "Updating endfield_cloud link..."
+            echo ${{ steps.get_links.outputs.ef_cloud_link }} > links/endfield_cloud
+            sed -i "s|{{endfield_cloud_timestamp}}|$(date +%s)|" README.md
+            sed -i "s|{{endfield_cloud_authkey_timestamp}}|$(date +%s)|" README.md
+          fi
+          sed -i "s|{{endfield_cloud_link}}|$(cat links/endfield_cloud)|" README.md
 
           if diff links/skland <(echo ${{ steps.get_links.outputs.sk_link }}) &> /dev/null; then
             echo "No update needed for skland link."

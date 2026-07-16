@@ -22,6 +22,14 @@
 - Tracking link: https://raw.githubusercontent.com/SkyBird233/gryph-links/main/links/endfield
 - Obtanium: [Click to add](https://apps.obtainium.imranr.dev/redirect.html?r=obtainium://add/https://raw.githubusercontent.com/SkyBird233/gryph-links/main/links/endfield)
 
+## Endfield Cloud
+![Endfield Cloud date](https://img.shields.io/date/{{endfield_cloud_timestamp}}?label=Updated)
+![Endfield Cloud auth_key date](https://img.shields.io/date/{{endfield_cloud_authkey_timestamp}}?label=auth_key)
+- Stable link: https://launcher.hypergryph.com/game/latest/EjOB8xSdBmtLnzCX/1/1
+- Direct link: {{endfield_cloud_link}}
+- Tracking link: https://raw.githubusercontent.com/SkyBird233/gryph-links/main/links/endfield_cloud
+- Obtanium: [Click to add](https://apps.obtainium.imranr.dev/redirect.html?r=obtainium://add/https://raw.githubusercontent.com/SkyBird233/gryph-links/main/links/endfield_cloud)
+
 ## Skland
 ![Skland date](https://img.shields.io/date/{{skland_timestamp}}?label=Updated)
 - Direct link: {{skland_link}}
