@@ -15,9 +15,9 @@
 
 ## Endfield
 ![Endfield date](https://img.shields.io/date/1784164946?label=Updated)
-![Endfield auth_key date](https://img.shields.io/date/1784164946?label=auth_key)
+![Endfield auth_key date](https://img.shields.io/date/1786781592?label=auth_key)
 - Stable link: https://launcher.hypergryph.com/game/latest/6LL0KJuqHBVz33WK/1/1
-- Direct link: https://beyond.hycdn.cn/6LL0KJuqHBVz33WK/1.4/package/1/1/Android/1.4.3_N3kXcstgi31V2hpt/endfield-hg-1-1.4.3.apk?auth_key=1784164945-9734e13d740643729e2998db098c6859-0-d5a9ab26280df23475efd0e385f505da
+- Direct link: https://beyond.hycdn.cn/6LL0KJuqHBVz33WK/1.4/package/1/1/Android/1.4.3_N3kXcstgi31V2hpt/endfield-hg-1-1.4.3.apk?auth_key=1786781586-982c331dc4be4a0b9f4ef0e1ac91b290-0-09090fc4ee5e8462c7f8ca74c4afcf65
     - 鹰角会在返回的 302 location 中附加时间有关的 authkey，但是似乎有效期较长，有待观察
 - Tracking link: https://raw.githubusercontent.com/SkyBird233/gryph-links/main/links/endfield
 - Obtanium: [Click to add](https://apps.obtainium.imranr.dev/redirect.html?r=obtainium://add/https://raw.githubusercontent.com/SkyBird233/gryph-links/main/links/endfield)
