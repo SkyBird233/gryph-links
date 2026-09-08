@@ -23,15 +23,15 @@
 - Obtanium: [Click to add](https://apps.obtainium.imranr.dev/redirect.html?r=obtainium://add/https://raw.githubusercontent.com/SkyBird233/gryph-links/main/links/endfield)
 
 ## Endfield Cloud
-![Endfield Cloud date](https://img.shields.io/date/1788313492?label=Updated)
-![Endfield Cloud auth_key date](https://img.shields.io/date/1788313492?label=auth_key)
+![Endfield Cloud date](https://img.shields.io/date/1788855849?label=Updated)
+![Endfield Cloud auth_key date](https://img.shields.io/date/1788855849?label=auth_key)
 - Stable link: https://launcher.hypergryph.com/game/latest/EjOB8xSdBmtLnzCX/1/1
-- Direct link: https://cloud-beyond.hycdn.cn/EjOB8xSdBmtLnzCX/1.5/package/1/1/Android/1.5.0_bVi20E0UZXtXevM7/EndfieldCloud-1-1.5.0.apk?auth_key=1788313490-5203bb1e2e9145949f9f337de5afaee6-0-2f9cd5bff3c25bf4dc7f4d74d8d0cb32
+- Direct link: https://cloud-beyond.hycdn.cn/EjOB8xSdBmtLnzCX/1.5/package/1/1/Android/1.5.1_BEy9VmAyYoOa5uH1/EndfieldCloud-1-1.5.1.apk?auth_key=1788855793-6719757c4b754ccf9c2bc868771f9518-0-12cb92ea581f9326c31918853f7e377b
 - Tracking link: https://raw.githubusercontent.com/SkyBird233/gryph-links/main/links/endfield_cloud
 - Obtanium: [Click to add](https://apps.obtainium.imranr.dev/redirect.html?r=obtainium://add/https://raw.githubusercontent.com/SkyBird233/gryph-links/main/links/endfield_cloud)
 
 ## Skland
-![Skland date](https://img.shields.io/date/1784628801?label=Updated)
-- Direct link: https://bbs.hycdn.cn/public/skland/others/download/lastest/63b980e5929b08c1fda221db1b3689d1.apk
+![Skland date](https://img.shields.io/date/1788855849?label=Updated)
+- Direct link: https://bbs.hycdn.cn/public/skland/others/download/lastest/d1adcd442f3e2cafa0ad706e9d5600c9.apk
 - Tracking link: https://raw.githubusercontent.com/SkyBird233/gryph-links/main/links/skland
 - Obtanium: [Click to add](https://apps.obtainium.imranr.dev/redirect.html?r=obtainium://add/https://raw.githubusercontent.com/SkyBird233/gryph-links/main/links/skland)
