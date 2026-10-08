@@ -24,9 +24,9 @@
 
 ## Endfield Cloud
 ![Endfield Cloud date](https://img.shields.io/date/1788855849?label=Updated)
-![Endfield Cloud auth_key date](https://img.shields.io/date/1788855849?label=auth_key)
+![Endfield Cloud auth_key date](https://img.shields.io/date/1791457218?label=auth_key)
 - Stable link: https://launcher.hypergryph.com/game/latest/EjOB8xSdBmtLnzCX/1/1
-- Direct link: https://cloud-beyond.hycdn.cn/EjOB8xSdBmtLnzCX/1.5/package/1/1/Android/1.5.1_BEy9VmAyYoOa5uH1/EndfieldCloud-1-1.5.1.apk?auth_key=1788855793-6719757c4b754ccf9c2bc868771f9518-0-12cb92ea581f9326c31918853f7e377b
+- Direct link: https://cloud-beyond.hycdn.cn/EjOB8xSdBmtLnzCX/1.5/package/1/1/Android/1.5.1_BEy9VmAyYoOa5uH1/EndfieldCloud-1-1.5.1.apk?auth_key=1791457170-c25f9c9157b5469db564afc97e79a4b4-0-9828046f71571f01bb9456dca240853d
 - Tracking link: https://raw.githubusercontent.com/SkyBird233/gryph-links/main/links/endfield_cloud
 - Obtanium: [Click to add](https://apps.obtainium.imranr.dev/redirect.html?r=obtainium://add/https://raw.githubusercontent.com/SkyBird233/gryph-links/main/links/endfield_cloud)
 
