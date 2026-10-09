@@ -7,7 +7,7 @@
 ---
 
 ## Arknights
-![Arknights date](https://img.shields.io/date/1791504041?label=Updated)
+![Arknights date](https://img.shields.io/date/1791504157?label=Updated)
 - Stable link: https://ak.hypergryph.com/downloads/android_lastest
 - Direct link: https://ak.hycdn.cn/GzD1CpaWgmSq1wew/78.0/package/1/1/Android/78.0.0_JUx7W5FdXjUAfFDx/arknights-hg-2781.apk
 - Tracking link: https://raw.githubusercontent.com/SkyBird233/gryph-links/main/links/arknights
@@ -31,7 +31,7 @@
 - Obtanium: [Click to add](https://apps.obtainium.imranr.dev/redirect.html?r=obtainium://add/https://raw.githubusercontent.com/SkyBird233/gryph-links/main/links/endfield_cloud)
 
 ## Skland
-![Skland date](https://img.shields.io/date/1788855850?label=Updated)
-- Direct link: https://bbs.hycdn.cn/public/skland/others/download/lastest/d1adcd442f3e2cafa0ad706e9d5600c9.apk
+![Skland date](https://img.shields.io/date/1791543634?label=Updated)
+- Direct link: https://bbs.hycdn.cn/public/skland/others/download/lastest/23bd2915c3aafefb2ac2221e99a0f8d0.apk
 - Tracking link: https://raw.githubusercontent.com/SkyBird233/gryph-links/main/links/skland
 - Obtanium: [Click to add](https://apps.obtainium.imranr.dev/redirect.html?r=obtainium://add/https://raw.githubusercontent.com/SkyBird233/gryph-links/main/links/skland)
