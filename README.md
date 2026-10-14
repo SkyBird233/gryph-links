@@ -14,19 +14,19 @@
 - Obtanium: [Click to add](https://apps.obtainium.imranr.dev/redirect.html?r=obtainium://add/https://raw.githubusercontent.com/SkyBird233/gryph-links/main/links/arknights)
 
 ## Endfield
-![Endfield date](https://img.shields.io/date/1788313492?label=Updated)
-![Endfield auth_key date](https://img.shields.io/date/1790909624?label=auth_key)
+![Endfield date](https://img.shields.io/date/1792017978?label=Updated)
+![Endfield auth_key date](https://img.shields.io/date/1792017978?label=auth_key)
 - Stable link: https://launcher.hypergryph.com/game/latest/6LL0KJuqHBVz33WK/1/1
-- Direct link: https://beyond.hycdn.cn/6LL0KJuqHBVz33WK/1.5/package/1/1/Android/1.5.3_1mexHxqVLooNlufz/endfield-hg-1-1.5.3.apk?auth_key=1790909620-ec03bb1b6a1844beb9a511181adfd342-0-6e7f5bb6bc0dc314f586e46a57ac94eb
+- Direct link: https://beyond.hycdn.cn/6LL0KJuqHBVz33WK/1.6/package/1/1/Android/1.6.4_zalKK5GCVQUtfKG1/endfield-hg-1-1.6.4.apk?auth_key=1792017975-c52b5f635d5442da93368fd2e9d9af11-0-279b03841439f831ae3d50f1c6db6358
     - 鹰角会在返回的 302 location 中附加时间有关的 authkey，但是似乎有效期较长，有待观察
 - Tracking link: https://raw.githubusercontent.com/SkyBird233/gryph-links/main/links/endfield
 - Obtanium: [Click to add](https://apps.obtainium.imranr.dev/redirect.html?r=obtainium://add/https://raw.githubusercontent.com/SkyBird233/gryph-links/main/links/endfield)
 
 ## Endfield Cloud
-![Endfield Cloud date](https://img.shields.io/date/1788855849?label=Updated)
-![Endfield Cloud auth_key date](https://img.shields.io/date/1791457218?label=auth_key)
+![Endfield Cloud date](https://img.shields.io/date/1792017978?label=Updated)
+![Endfield Cloud auth_key date](https://img.shields.io/date/1792017978?label=auth_key)
 - Stable link: https://launcher.hypergryph.com/game/latest/EjOB8xSdBmtLnzCX/1/1
-- Direct link: https://cloud-beyond.hycdn.cn/EjOB8xSdBmtLnzCX/1.5/package/1/1/Android/1.5.1_BEy9VmAyYoOa5uH1/EndfieldCloud-1-1.5.1.apk?auth_key=1791457170-c25f9c9157b5469db564afc97e79a4b4-0-9828046f71571f01bb9456dca240853d
+- Direct link: https://cloud-beyond.hycdn.cn/EjOB8xSdBmtLnzCX/1.6/package/1/1/Android/1.6.0_CoC6YFsGrFMESbYH/EndfieldCloud-1-1.6.0.apk?auth_key=1792017976-62bac78ace5d4bae93b129b783c10229-0-1d0cb8838a1b6d60a54de5c8eba11ffc
 - Tracking link: https://raw.githubusercontent.com/SkyBird233/gryph-links/main/links/endfield_cloud
 - Obtanium: [Click to add](https://apps.obtainium.imranr.dev/redirect.html?r=obtainium://add/https://raw.githubusercontent.com/SkyBird233/gryph-links/main/links/endfield_cloud)
 
