@@ -7,7 +7,7 @@
 ---
 
 ## Arknights
-![Arknights date](https://img.shields.io/date/1793501768?label=Updated)
+![Arknights date](https://img.shields.io/date/1793501885?label=Updated)
 - Stable link: https://ak.hypergryph.com/downloads/android_lastest
 - Direct link: https://ak.hycdn.cn/GzD1CpaWgmSq1wew/79.0/package/1/1/Android/79.0.0_R4C8v7EmosKsRK1Q/arknights-hg-2791.apk
 - Tracking link: https://raw.githubusercontent.com/SkyBird233/gryph-links/main/links/arknights
